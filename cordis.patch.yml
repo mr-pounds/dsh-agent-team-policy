@@ -1,0 +1,10 @@
+# Bundle patch for dsh-agent-team-policy.
+#
+# One host-level row: the plugin registers a single system-prompt section
+# (`delegation:policy`, order 100) that is visible to every session and to the
+# subagents those sessions spawn. Global placement is deliberate — a delegation
+# rule that only exists inside a preset disappears the moment someone runs a
+# `complete: true` preset.
+- insert:
+    - id: agent-team-policy
+      name: dsh-agent-team-policy
