@@ -1,6 +1,6 @@
 {
   "name": "dsh-agent-team-policy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Constrain when the agent may spawn subagents or teammates: adversarial review and one-shot context reading only.",
   "license": "MIT",
   "repository": {

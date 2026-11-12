@@ -21,7 +21,7 @@ One section, `delegation:policy`, at prompt order `100`:
 - before plan mode (`500`), the Agent Teams policy (`600`) and every tool section (`1000+`),
 - so it is read *before* any tool guidance that says "start independent delegations together".
 
-The text allows exactly the two cases above, lists the cases that must stay local (single-file change, need the raw material to decide, no verifiable per-subtask output, already know the answer), and requires every delegation to state its goal, acceptance criteria, write scope, and whether it needs this conversation. Parallel work must not overlap write scopes; reuse an idle subagent before starting another; no padding.
+The text allows exactly the two cases above, lists the cases that must stay local (single-file change, need the raw material to decide, no verifiable per-subtask output, already know the answer), and requires every delegation to state its goal, acceptance criteria, write scope, and whether it needs this conversation. Parallel work must not overlap write scopes; reuse an idle subagent before starting another; no padding. It also requires checking with the user before every delegation — nothing is started automatically unless the user explicitly asked for it.
 
 ## Install
 
