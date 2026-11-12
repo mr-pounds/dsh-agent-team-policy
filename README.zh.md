@@ -48,6 +48,10 @@ dsh plugin add /绝对路径/dsh-agent-team-policy
 - **会被 `complete: true` 的 preset 丢掉。** 整份重写系统提示词的 preset（内置的 `minimal` 就是）只保留自己的人设。
 - **规则正文是中文。** 改措辞或改语言就编辑 [`lib/index.js`](lib/index.js) 里的 `POLICY`；插件刻意不带 config schema，既没有要校验的字段，也不会因为未知配置项挂载失败。
 
+## 发布
+
+见 [CONTRIBUTING.md](CONTRIBUTING.md)：发布只用 npm Automation token（bypass 2FA），不用一次性动态码；并且必须显式带 `--registry=https://registry.npmjs.org`——默认源是镜像时，镜像站不接受发布。
+
 ## 兼容性
 
 按 dsh `0.2.2-rc.1` 编写，只用到 `ctx.systemPrompt.section({ name, order, text })`。任何暴露 `systemPrompt` 服务的版本都能用。

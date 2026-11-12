@@ -48,6 +48,10 @@ Start a new session and ask the agent to repeat its delegation rules, or take a 
 - **`complete: true` presets drop it.** A preset that replaces the whole system prompt (the shipped `minimal` preset does) keeps only its own persona.
 - **The rule text is Chinese.** Edit `POLICY` in [`lib/index.js`](lib/index.js) to change the wording or the language; the plugin deliberately has no config schema, so there is nothing to validate and nothing to break on mount.
 
+## Releasing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md): publishing uses an npm Automation token (bypasses 2FA) and never an interactive one-time password, and it always passes `--registry=https://registry.npmjs.org` explicitly, because the default registry on a mirror-configured machine does not accept publishes.
+
 ## Compatibility
 
 Written against dsh `0.2.2-rc.1` and only uses `ctx.systemPrompt.section({ name, order, text })`. Any build that exposes the `systemPrompt` service works.
